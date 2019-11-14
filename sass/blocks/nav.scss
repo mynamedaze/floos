@@ -1,0 +1,28 @@
+.nav {
+  margin-left: 29px;
+  margin-right: auto;
+}
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  min-width: 424px;
+}
+.nav-item {
+  flex-grow: 1;
+  text-align: center;
+  position: relative;
+  &:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 14px;
+    background-color: $link-color;
+    right: 0;
+    top: 50%;
+    transform: translateY(-7px);
+  }
+}
+.nav-link {
+  color: $alt-color;
+  font-size: 16px;
+}

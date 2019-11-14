@@ -1,0 +1,16 @@
+.first {
+  @include bg--alt1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.first__wrapper {
+  @include paddings;
+}
+.first__title {
+  font-family: $alt-font;
+  color: $alt-color;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 60px;
+}

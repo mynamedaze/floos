@@ -1,0 +1,60 @@
+.core {
+  background-color: $main-bg;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.core__wrapper {
+  @include paddings;
+}
+.core__title {
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $alt-font;
+}
+.core__description {
+  display: block;
+  text-align: center;
+}
+.core__list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  max-width: 860px;
+  @include centers;
+}
+.core__item {
+  max-width: 200px;
+  padding-top: 182px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 190px;
+    height: 182px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &:nth-child(1)::before {
+    background-image: url("../../img/phone-lock.png");
+    background-size: 126px 182px;
+  }
+  &:nth-child(2)::before {
+    background-image: url("../../img/credit-score.png");
+    background-size: 190px 142px;
+  }
+  &:nth-child(3)::before {
+    background-image: url("../../img/orchestration.png");
+    background-size: 188px 168px;
+  }
+}
+.core__item-title {
+  font-size: 21px;
+  font-family: $alt-font;
+}

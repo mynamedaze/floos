@@ -1,0 +1,37 @@
+.contact {
+  background-color: $main-bg;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include paddings;
+}
+.contact__wrapper {
+  @include centers;
+  max-width: 596px;
+}
+.contact__title {
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $alt-font;
+}
+.contact__description {
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact__textarea {
+  width: 100%;
+}
+.contact__input {
+
+}
+.contact__submit {
+  @include btn;
+}

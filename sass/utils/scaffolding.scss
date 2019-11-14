@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  font-family: $main-font;
+  color: $main-color;
+  font-size: 14px;
+  font-weight: 300;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+ul {
+  padding-left: 0;
+}
