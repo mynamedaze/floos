@@ -1,10 +1,13 @@
 .success {
-  position: absolute;
-  z-index: 11;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px 30px;
+  display: none;
+  .active {
+    position: absolute;
+    z-index: 11;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+  }
 }
 .success__notice {
   font-family: $alt-font;

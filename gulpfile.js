@@ -25,7 +25,7 @@ function watch() {
     }
   });
 
-  gulp.watch("sass/**/*.{scss,sass}", style);
+  gulp.watch("./sass/**/*.{scss,sass}", style);
   gulp.watch("*.html").on("change", browserSync.reload);
 }
 
