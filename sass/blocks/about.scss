@@ -6,11 +6,22 @@
 }
 .about__wrapper {
   @include paddings;
+  @media #{$max-mobile-width} {
+    padding-top: 40px;
+  }
 }
 .about__title {
   font-family: $alt-font;
   color: $alt-color;
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 60px;
+  @media #{$max-mobile-width} {
+    font-size: 32px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 50px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 60px;
+  }
 }

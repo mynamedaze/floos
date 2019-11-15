@@ -6,19 +6,33 @@
 }
 .core__wrapper {
   @include paddings;
+  @media #{$max-mobile-width} {
+    padding-top: 50px;
+  }
 }
 .core__title {
-  font-size: 40px;
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
   font-family: $alt-font;
+  @media #{$max-mobile-width} {
+    font-size: 28px;
+  }
+  @media #{$min-tablet-width} {
+    font-size: 40px;
+  }
+  @media #{$min-desktop-width} {
+    font-size: 40px;
+  }
 }
 .core__description {
   display: block;
   text-align: center;
+  @media #{$max-mobile-width} {
+    display: none;
+  }
 }
 .core__list {
   display: flex;
@@ -26,35 +40,99 @@
   list-style-type: none;
   max-width: 860px;
   @include centers;
+  @media #{$max-smallest-width} {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .core__item {
   max-width: 200px;
-  padding-top: 182px;
   position: relative;
+  @media #{$max-smallest-width} {
+    padding-top: 88px;
+    margin-top: 10px;
+  }
+  @media #{$min-smallest-width} {
+    padding-top: 127px;
+  }
+  @media #{$min-tablet-width} {
+    padding-top: 127px;
+  }
+  @media #{$min-desktop-width} {
+    padding-top: 182px;
+  }
   &::before {
     position: absolute;
     content: "";
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
-    width: 190px;
-    height: 182px;
     background-repeat: no-repeat;
     background-position: center;
+    @media #{$max-smallest-width} {
+      width: 93px;
+      height: 89px;
+    }
+    @media #{$min-smallest-width} {
+      width: 133px;
+      height: 127px;
+    }
+    @media #{$min-desktop-width} {
+      width: 190px;
+      height: 182px;
+    }
   }
   &:nth-child(1)::before {
     background-image: url("../../img/phone-lock.png");
-    background-size: 126px 182px;
+    @media #{$max-smallest-width} {
+      background-size: 62px auto;
+    }
+    @media #{$min-smallest-width} {
+      background-size: 88px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-size: 126px auto;
+    }
   }
   &:nth-child(2)::before {
     background-image: url("../../img/credit-score.png");
-    background-size: 190px 142px;
+    @media #{$max-smallest-width} {
+      background-size: 93px auto;
+    }
+    @media #{$min-smallest-width} {
+      background-size: 133px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-size: 190px auto;
+    }
   }
   &:nth-child(3)::before {
     background-image: url("../../img/orchestration.png");
-    background-size: 188px 168px;
+    @media #{$max-smallest-width} {
+      background-size: 92px auto;
+    }
+    @media #{$min-smallest-width} {
+      background-size: 131px auto;
+    }
+    @media #{$min-desktop-width} {
+      background-size: 188px auto;
+    }
   }
 }
 .core__item-title {
   font-size: 21px;
   font-family: $alt-font;
+  margin-bottom: 0;
+  margin-top: 0;
+  @media #{$min-smallest-width} {
+    text-align: center;
+  }
+  @media #{$min-tablet-width} {
+    text-align: left;
+  }
+}
+.core__item-paragraph {
+  @media #{$max-mobile-width} {
+    display: none;
+  }
 }

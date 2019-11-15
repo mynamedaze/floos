@@ -5,7 +5,7 @@ $(".main").onepage_scroll({
   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
-  pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+  pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
@@ -16,3 +16,33 @@ $(".main").onepage_scroll({
   // the browser's width is less than 600, the fallback will kick in.
   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
 });
+
+$('.nav__link--1').click(function (event) {
+  console.log('dsdsds');
+  $(".main").moveTo(1);
+});
+$('.nav__link--2').click(function (event) {
+  console.log('dsdsds');
+  $(".main").moveTo(2);
+});
+$('.nav__link--3').click(function (event) {
+  console.log('dsdsds');
+  $(".main").moveTo(3);
+});
+$('.nav__link--4').click(function (event) {
+  console.log('dsdsds');
+  $(".main").moveTo(4);
+});
+$('.nav__link--5').click(function (event) {
+  console.log('dsdsds');
+  $(".main").moveTo(6);
+});
+
+/* mobile nav */
+let headerBurger = document.getElementsByClassName('header__burger');
+let nav = document.getElementsByClassName('nav');
+  $(headerBurger).click(function () {
+    $(nav).toggleClass('active');
+    $(headerBurger).toggleClass('active');
+  });
+/* /mobile nav */
